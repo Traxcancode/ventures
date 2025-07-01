@@ -30,14 +30,21 @@ local library = gui_service:initialize({
   Watermark = "None" -- Set as "None" for no watermark!
 })
 local tab1 = library:addtab("aimbot", Icon = "https://cdn-icons-png.flaticon.com/512/3082/3082985.png")
+
 local sections = tab1:add_sections(2) -- add two sections
+
 sections:next_section() -- go to first
+
 tab1:header("this is a header!")
+
 tab1:text("This is a section!")
+
 sections:next_section()
+
 tab1:button("This is a button!", function()
   print("clicked!")
 end)
+
 tab1:toggle("hi", function(bool)
   if bool then
     print("hi!")
@@ -45,12 +52,16 @@ tab1:toggle("hi", function(bool)
     print("bye")
   end
 end)
+
 tab1:add_slider("this is a slider!", 1, 100, 0.5, function(value) -- 1 is min, 100 is max, 0.5 is interval
   print(value)
 end)
-
+-- edit gui elements/themes --
 library.back_color = Color3.fromRGB(255,255,255)
 library.tabs_color = Color3.fromRGB(255,0,0)
 library.title_color = Color3.fromRGB(1,1,1)
 library.primary_color = Color3.fromRGB(0,255,0)
+library:set_back_image("https://www.mustard.com")
+library.tab_padding = 2
+library.transparency = 0
 ```
