@@ -106,3 +106,23 @@ local workspace = game.workspace
 local coregui = game.coregui
 local replicatedstorage = game.replicatedstorage
 ```
+## Files
+```lua
+-- example code below --
+
+local config_folder = find_folder("configs")
+if not config_folder then
+  config_folder = make_folder("configs")
+end
+local config = find_file(config_folder, "config.cfg")
+if not config then
+  config = make_file(config_folder, "config.cfg", "nothing")
+end
+local data = read_file(config)
+write_file(config, "hello!?")
+
+for index, file in list_files(config_folder) do
+  print(file)
+end
+
+```
