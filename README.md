@@ -22,7 +22,7 @@ memory.write_vector3(datamodel + 0x22, Vector3.new(12,12,12))
 memory.write_cframe(datamodel + 0x12, CFrame.new(1,1,1))
 ```
 ## GUI
-```
+```lua
 local library = gui_service:initialize({
   Name = "Tutorial!",
   Size = Vector2.new(400,400),
