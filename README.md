@@ -65,3 +65,38 @@ library:set_back_image("https://www.mustard.com")
 library.tab_padding = 2
 library.transparency = 0
 ```
+## Drawing
+```lua
+local line = Drawing.new("Line")
+line.to = Vector2.new(1,1)
+line.from = Vector2.new(2,2)
+line.thickness = 5
+line.transparency = 0
+line.visible = true
+line.color = Color3.fromRGB(255,255,255)
+
+local box = Drawing.new("Square")
+box.size = Vector2.new(12,12)
+box.thickness = 5
+box.transparency = 0
+box.visible = true
+box.position = Vector2.new(55,55)
+box.color = Color3.fromRGB(255,255,255)
+
+local circle = Drawing.new("Circle")
+circle.radius = 15
+circle.position = Vector2.new(12,12)
+circle.transparency = 0
+circle.visible = false
+circle.thickness = 1
+circle.color = Color3.fromRGB(255,255,255)
+
+local triangle = Drawing.new("Triangle")
+triangle.point_1 = Vector2.new(12,12)
+triangle.point_2 = Vector2.new(1,12)
+triangle.point_3 = Vector2.new(5,12)
+triangle.transparency = 0
+triangle.color = Color3.fromRGB(255,255,255)
+triangle.thickness = 2
+
+```
