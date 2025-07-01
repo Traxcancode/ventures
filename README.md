@@ -124,5 +124,5 @@ write_file(config, "hello!?")
 for index, file in list_files(config_folder) do
   print(file)
 end
-
+-- note, you cannot save executable files.
 ```
