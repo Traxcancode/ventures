@@ -98,5 +98,11 @@ triangle.point_3 = Vector2.new(5,12)
 triangle.transparency = 0
 triangle.color = Color3.fromRGB(255,255,255)
 triangle.thickness = 2
-
+```
+## Globals
+```lua
+local players = game.players
+local workspace = game.workspace
+local coregui = game.coregui
+local replicatedstorage = game.replicatedstorage
 ```
