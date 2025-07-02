@@ -45,6 +45,14 @@ tab1:button("This is a button!", function()
   print("clicked!")
 end)
 
+tab1:dropdown("select a option", options = {"hi","bye"}, multi = false, callback = function(option)
+  print(option)
+end)
+
+tab1:dropdown("select many options", options = {"hi","bye", "hello"}, multi = true, callback = function(option)
+  print(option)
+end)
+
 tab1:toggle("hi", function(bool)
   if bool then
     print("hi!")
