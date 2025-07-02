@@ -49,8 +49,10 @@ tab1:dropdown("select a option", options = {"hi","bye"}, multi = false, callback
   print(option)
 end)
 
-tab1:dropdown("select many options", options = {"hi","bye", "hello"}, multi = true, callback = function(option)
-  print(option)
+tab1:dropdown("select many options", options = {"hi","bye", "hello"}, multi = true, callback = function(options)
+  for _, option in pairs(options) do
+    print(option)
+  end
 end)
 
 tab1:toggle("hi", function(bool)
