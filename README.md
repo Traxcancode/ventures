@@ -12,6 +12,7 @@ local place_name = memory.read_string(datamodel + 0x12)
 local position = memory.read_vector3(datamodel + 0x22)
 local cf = memory.read_cframe(datamodel + 0x12)
 local aobscan = memory.pattern_scan("00 11 22 33 44")
+local test = memory.read_byte(datamodel + 0x555)
 -- note, writing is nearly the same!
 
 memory.write_pointer(base + 0x12345, 0x20)
@@ -20,6 +21,7 @@ memory.write_float(datamodel + 0x50, 20)
 memory.write_string(datamodel + 0x12, "mustard!!!")
 memory.write_vector3(datamodel + 0x22, Vector3.new(12,12,12))
 memory.write_cframe(datamodel + 0x12, CFrame.new(1,1,1))
+memory.write_byte(datamodel + 0x555, 0x12)
 ```
 ## GUI
 ```lua
