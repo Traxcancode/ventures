@@ -128,12 +128,12 @@ if not config_folder then
 end
 local config = is_file(config_folder, "config.cfg")
 if not config then
-  config = make_file(config_folder, "config.cfg", "nothing")
+  config = make_file("configs\\config.cfg", "nothing")
 end
 local data = read_file(config)
-write_file(config, "hello!?")
+write_file("configs\\config.cfg", "hello!?")
 
-for index, file in list_files(config_folder) do
+for index, file in list_files("configs") do
   print(file)
 end
 -- note, you cannot save executable files.
