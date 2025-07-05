@@ -123,18 +123,36 @@ local replicatedstorage = game.replicatedstorage
 -- example code below --
 
 local config_folder = is_folder("configs")
-if not config_folder then
-  config_folder = make_folder("configs")
-end
-local config = is_file(config_folder, "config.cfg")
-if not config then
-  config = make_file("configs\\config.cfg", "nothing")
-end
-local data = read_file(config)
-write_file("configs\\config.cfg", "hello!?")
 
-for index, file in list_files("configs") do
-  print(file)
+if not config_foler then 
+    make_folder("configs")
 end
+
+local config_1 = is_file("configs\\cfg1.cfg")
+
+if not config_1 then
+    make_file("configs\\cfg1.cfg", "Hello!")
+end
+
+local data = read_file("configs\\cfg1.cfg")
+
+write_file("configs\\cfg1.cfg", "Bye!")
+
+for i,v in list_files("configs") do
+    print(i,v)
+end
+
 -- note, you cannot save executable files.
+
+-- functions --
+
+local exists = is_file(path)
+local folder_exists = is_folder(path)
+local status = make_folder(path)
+local status_file = make_file(path, data)
+local data = read_file(path)
+local status_2 = write_file(path, data)
+local files = list_files(path)
+local gone = delete_folder(path)
+local gone_file = delete_file(path)
 ```
