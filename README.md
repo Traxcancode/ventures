@@ -122,11 +122,11 @@ local replicatedstorage = game.replicatedstorage
 ```lua
 -- example code below --
 
-local config_folder = find_folder("configs")
+local config_folder = is_folder("configs")
 if not config_folder then
   config_folder = make_folder("configs")
 end
-local config = find_file(config_folder, "config.cfg")
+local config = is_file(config_folder, "config.cfg")
 if not config then
   config = make_file(config_folder, "config.cfg", "nothing")
 end
