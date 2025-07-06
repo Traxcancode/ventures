@@ -112,13 +112,6 @@ triangle.transparency = 0
 triangle.color = Color3.fromRGB(255,255,255)
 triangle.thickness = 2
 ```
-## Globals
-```lua
-local players = game.players
-local workspace = game.workspace
-local coregui = game.coregui
-local replicatedstorage = game.replicatedstorage
-```
 ## Files
 ```lua
 -- example code below --
@@ -157,7 +150,7 @@ local files = list_files(path)
 local gone = delete_folder(path)
 local gone_file = delete_file(path)
 ```
-# Globals
+## Globals
 ```lua
 local localplayer = getlocalplayer()
 local datamodel = get_datamodel()
