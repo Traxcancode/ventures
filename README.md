@@ -13,6 +13,7 @@ local position = memory.read_vector3(datamodel + 0x22)
 local cf = memory.read_cframe(datamodel + 0x12)
 local aobscan = memory.pattern_scan("00 11 22 33 44")
 local test = memory.read_byte(datamodel + 0x555)
+local players = getservice("Players")
 -- note, writing is nearly the same!
 
 memory.write_pointer(base + 0x12345, 0x20)
@@ -156,3 +157,12 @@ local files = list_files(path)
 local gone = delete_folder(path)
 local gone_file = delete_file(path)
 ```
+# Globals
+```lua
+local localplayer = getlocalplayer()
+local datamodel = get_datamodel()
+local classname = classname(localplayer) -- Player
+setvalue(value, 1) -- can be a Vector3Value, BoolValue, StringValue, IntValue, NumberValue or any other.
+wait(1) -- waits a second
+local children = getchildren(localplayer)
+``
